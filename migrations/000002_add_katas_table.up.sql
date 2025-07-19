@@ -1,0 +1,12 @@
+BEGIN;
+
+CREATE TABLE IF NOT EXISTS katas (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    slug VARCHAR(255) NOT NULL,
+    tags JSONB NOT NULL DEFAULT '[]'::jsonb,
+    languages JSONB NOT NULL DEFAULT '[]'::jsonb,
+    added_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+COMMIT;

@@ -1,0 +1,5 @@
+BEGIN;
+
+ALTER TABLE katas DROP COLUMN url;
+
+COMMIT;
